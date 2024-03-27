@@ -7,7 +7,54 @@ services:
       dockerfile: Dockerfile
     container_name: evasion-a-baaba
     ports:
-      - '3000:3000'
+      - '4000:4000'
     volumes:
       - .:/app
       - /app/node_modules
+    links:
+      - "backend:express"
+ 
+
+  postgres:
+    build:
+      context: postgresql
+      dockerfile: /postgresql.Dockerfile
+    image: "postgres-skazy"
+    container_name: ${PG_CONTAINER_NAME}
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: ${PGDATA}
+    volumes:
+       - dbskazy:/data/postgres-skazy
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - backend
+  backend:
+    image: "express"
+    depends_on:
+      - postgres
+    links:
+      - "postgres"
+    build: 
+      context: express
+      dockerfile: /express.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /node_modules
+    ports:
+      - "5000:5000"
+    networks:
+      - backend
+volumes:
+    dbskazy:
+      external: true
+networks:
+  backend:
+    driver: bridge
+  
+

@@ -36,5 +36,6 @@ app.use(bedroomRoute);
 
 const PORT = 5000;
 app.listen(PORT, () => {
+   console.log('DB is ' + process.env.PGUSER || "NULL");
    console.log('Server Started at ' + PORT);
 });
