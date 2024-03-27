@@ -3,9 +3,9 @@ import styles from "./page.module.css";
 
 export default function LandingDiv() {
     return (
-        <div className="h-full flex w-4/5 m-auto pt-6 pb-6" id='Presentation' >
+        <div className="h-full flex w-4/5 m-auto mt-24 lg:mt-36 pb-6" id='Presentation' >
             <div className="m-6  w-full grow hidden md:block " >
-                <img src="/photo-cover.png" alt="Cocotiers vus depuis le gîte" className=" "/>
+                <img src="/photo-cover.webp" alt="Cocotiers vus depuis le gîte" className=" "/>
             </div>
             <div className="w-11/12  ">
                 <h3 className="mt-6 mb-8 md:font-bold font-medium text-xl " >

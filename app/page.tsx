@@ -15,7 +15,7 @@ export default function Home() {
             <Informations/>
             <Bedroom 
             title="Chambre Poingam" 
-            img="/chambre-poingam.png"  
+            img="/chambre-poingam.webp"  
             color="text-[#FF9F87]"
             button={{text:"Réserver la chambre Poingam ", url:"", color:'bg-[#FF9F87]'}}
             positive={["Spacieuse et confortable, idéale pour deux adultes et un enfant",
@@ -28,7 +28,7 @@ export default function Home() {
           
             <Bedroom 
             title="Chambre Taanlo" 
-            img="/chambre-taanlo.png"  
+            img="/chambre-taanlo.webp"  
             color="text-[#36BAC6]"
             button={{text:"Réserver la chambre Taanlo ", url:"", color:'bg-[#36BAC6]'}}
             positive={["Lit king-size confortable pour deux adultes",
@@ -45,7 +45,7 @@ export default function Home() {
             
             <Bedroom 
             title="Chambre Yenghebane" 
-            img="/chambre-yenghebane.png"  
+            img="/chambre-yenghebane.webp"  
             color="text-[#BD9E70]"
             button={{text:"Réserver la chambre Yenghebane ", url:"", color:'bg-[#BD9E70]'}}
             positive={["Lit queen-size somptueux pour deux adultes", 

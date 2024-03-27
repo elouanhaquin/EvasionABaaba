@@ -1,5 +1,6 @@
-import CallToAction from "./callToAction";
 import styles from "./page.module.css";
+import { Cedarville_Cursive } from "next/font/google";
+const cedarville = Cedarville_Cursive({weight:"400", subsets: ["latin"]});
 
 export default function Footer() {
     return (
@@ -7,7 +8,7 @@ export default function Footer() {
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <a href="" className={styles.title}>
+                        <a href="" className={cedarville.className}>
                             <span className="self-center text-xl font-semibold whitespace-nowrap text-white  ">Evasion à Baaba</span>
                         </a>
                         <div className="sm:flex sm:items-center sm:justify-between">
