@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import CallToAction, { Ibutton } from "./callToAction";
 import styles from "./page.module.css";
 
-interface Ibedroom {
+export interface Ibedroom {
     title: string,
     p1: string,
     p2: string,
@@ -14,6 +15,8 @@ interface Ibedroom {
 
 
 export default function Bedroom(p_bedroom: Readonly<Ibedroom>) {
+
+
     return (
         <div className={"h-4/5 flex w-4/5  pt-6 pb-6 lg:mt-36  "  + ( p_bedroom.cssInversed != undefined && p_bedroom.cssInversed === true ?  " flex-row-reverse m-auto " : " m-auto")} id='Reserver' >
 
