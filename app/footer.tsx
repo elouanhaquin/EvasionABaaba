@@ -1,5 +1,5 @@
-import styles from "./page.module.css";
 import { Cedarville_Cursive } from "next/font/google";
+import Image from 'next/image'
 const cedarville = Cedarville_Cursive({weight:"400", subsets: ["latin"]});
 
 export default function Footer() {

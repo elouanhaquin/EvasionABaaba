@@ -19,6 +19,10 @@ export default function Reservation() {
         else
             p_state([...p_arr, p_stringToAdd])
     }
+    
+    useEffect(() => {
+        computePrice()
+    }, [dateStart, childCount, selectedBedroom, selectedDay])
 
     function computePrice() {
         if (dateStart && selectedBedroom.length > 0 && selectedDay.length > 0) {
@@ -30,9 +34,7 @@ export default function Reservation() {
         }
     }
 
-    useEffect(() => {
-        computePrice()
-    }, [dateStart, childCount, selectedBedroom, selectedDay])
+   
 
 
     useEffect(() => {
@@ -70,7 +72,7 @@ export default function Reservation() {
                 <div className="w-full flex" >
                     <div className="w-full md:w-4/6">
                         <h4 className="mt-8">
-                            Nombre d'enfants (au maximum un par chambre)
+                            {"Nombre d'enfants"} (au maximum un par chambre)
                         </h4>
                         <div className="flex-col md:flex-row space-y-5 md:space-x-32  mt-6">
                             <input value={childCount} max={selectedBedroom.length} min={0} onChange={e => setChildCount(Number.parseInt(e.target.value))} type="number" placeholder="Nombre d'enfants" className="bg-white w-full  md:w-1/3 focus:outline-none rounded-md p-4 border-2 border-teal-500 ">

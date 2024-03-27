@@ -18,7 +18,6 @@ export default function Home() {
   useEffect(() => {
     getBedrooms().then((_bedrooms) =>{
       setBedrooms(_bedrooms)
-      console.log(_bedrooms)
     })
 
   }, [])
@@ -29,7 +28,7 @@ export default function Home() {
             <HeaderPage/>
             <LandingDiv/>
             <Informations/>
-
+            
             {bedrooms.map((_bedroom, _i) => 
                 <Bedroom key={_bedroom.title}
                 title={_bedroom.title}

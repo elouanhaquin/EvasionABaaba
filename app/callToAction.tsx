@@ -1,3 +1,5 @@
+'use client'
+
 export interface Ibutton{
     text : string,
     url : string,

@@ -1,6 +1,4 @@
-import CallToAction from "./callToAction";
-import styles from "./page.module.css";
-
+import Image from 'next/image'
 export default function Informations() {
     return (
         <div className="h-full flex mt-16 pb-24 lg:mt-36 " id='Informations' >
