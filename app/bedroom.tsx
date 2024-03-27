@@ -43,7 +43,7 @@ export default function Bedroom(p_bedroom: Readonly<Ibedroom>) {
                     <br />
                     {p_bedroom.p2}
                 </p>
-                <h3 className={"m-2 mt-4 text-justify text-2xl  " +cedarville.className + " " + (p_bedroom.button.color.replace('bg', 'text') ? p_bedroom.button.color.replace('bg', 'text') : " text-[#FF9F87]") } >
+                <h3 className={"m-2 mt-4 text-justify text-2xl  " +cedarville.className + " " + (" text-[#BD9E70]") } >
                     Les plus  
                 </h3>
                 <ul>
@@ -54,7 +54,7 @@ export default function Bedroom(p_bedroom: Readonly<Ibedroom>) {
                     )}
 
                 </ul>
-                <CallToAction text={p_bedroom.button.text} url={p_bedroom.button.url} color={ p_bedroom.button.color.includes("b") ? p_bedroom.button.color : "bg-[#BD9E70]"}></CallToAction>
+                <CallToAction text={p_bedroom.button.text} url={p_bedroom.button.url} color={"bg-[#BD9E70]"}></CallToAction>
             </div>
 
         </div>
