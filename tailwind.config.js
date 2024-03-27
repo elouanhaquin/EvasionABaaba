@@ -9,6 +9,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'display': ['Cedarville Cursive'],
+      'body': ['"Source Sans Pro"'],
+    },
     extend: {},
   },
   plugins: [],
