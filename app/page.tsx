@@ -4,6 +4,8 @@ import HeaderPage from "./header";
 import LandingDiv from "./LandingDiv";
 import Informations from "./Informations";
 import Bedroom from "./bedroom";
+import Reservation from "./reservation";
+import Footer from "./footer";
 
 export default function Home() {
   return (
@@ -14,8 +16,8 @@ export default function Home() {
             <Bedroom 
             title="Chambre Poingam" 
             img="/chambre-poingam.png"  
-            color="#FF9F87"
-            button={{text:"Réserver Cette Chambre ", url:""}}
+            color="text-[#FF9F87]"
+            button={{text:"Réserver la chambre Poingam ", url:"", color:'bg-[#FF9F87]'}}
             positive={["Spacieuse et confortable, idéale pour deux adultes et un enfant",
             "Décoration inspirée de la nature pour une ambiance relaxante",
             "Fenêtres panoramiques offrant des vues pittoresques sur les environs",
@@ -27,14 +29,15 @@ export default function Home() {
             <Bedroom 
             title="Chambre Taanlo" 
             img="/chambre-taanlo.png"  
-            color="#36BAC6"
-            button={{text:"Réserver Cette Chambre ", url:""}}
+            color="text-[#36BAC6]"
+            button={{text:"Réserver la chambre Taanlo ", url:"", color:'bg-[#36BAC6]'}}
             positive={["Lit king-size confortable pour deux adultes",
             "Espace dédié avec un lit supplémentaire pour un enfant",
             "Ambiance moderne et chaleureuse, avec des touches de bois naturel",
             "Magnifique vue sur le jardin tropical à travers les larges fenêtres",
             "Salle de bains attenante avec douche et commodités modernes"]}
         
+            cssInversed={true}
             p2="La Chambre Taanlo offre un lit king-size confortable pour les adultes et un espace dédié avec un lit supplémentaire pour l'enfant, assurant à toute la famille une nuit de sommeil paisible. L'ambiance de la chambre est à la fois moderne et chaleureuse, avec des touches de bois naturel et des accents inspirés de la culture locale.
 
             Les larges fenêtres offrent une vue magnifique sur notre jardin tropical luxuriant, créant une atmosphère sereine et invitant la lumière naturelle à inonder l'espace. La salle de bains attenante est équipée d'une douche revigorante et de commodités modernes pour votre confort." 
@@ -43,8 +46,8 @@ export default function Home() {
             <Bedroom 
             title="Chambre Yenghebane" 
             img="/chambre-yenghebane.png"  
-            color="red-500"
-            button={{text:"Réserver Cette Chambre ", url:""}}
+            color="text-[#BD9E70]"
+            button={{text:"Réserver la chambre Yenghebane ", url:"", color:'bg-[#BD9E70]'}}
             positive={["Lit queen-size somptueux pour deux adultes", 
             "Espace dédié avec un lit supplémentaire pour un enfant ",
             "Élégance et raffinement avec des touches de décoration locales ",
@@ -54,6 +57,9 @@ export default function Home() {
 
             Les grandes baies vitrées offrent une vue imprenable sur l'océan scintillant ou sur notre jardin luxuriant. La salle de bains attenante est un sanctuaire de détente, équipée d'une douche luxueuse et de commodités modernes pour votre confort" 
             p1="Bienvenue dans notre magnifique Chambre Yenghebane, un havre de paix conçu pour accueillir deux personnes et un enfant, offrant une expérience de séjour inoubliable au cœur de la Nouvelle-Calédonie. Le nom Yenghebane évoque les sommets majestueux de l'île, et cette chambre vous offre une retraite luxueuse à la hauteur de son nom."/>
+         
+          <Reservation/>
+          <Footer/>
           </main>
           );
 }
