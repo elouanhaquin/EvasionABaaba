@@ -60,48 +60,48 @@ export default function Reservation() {
                 <h4>
                     Chambre à réserver
                 </h4>
-                <div className="flex space-x-32 mt-6">
-                    <button className={"rounded-md p-4 border-2 border-teal-500 w-1/3 hover:bg-teal-100 " + (selectedBedroom.includes('Poingam') ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist("Poingam", selectedBedroom, setSelectedBedroom)}>
+                <div className="flex flex-col md:flex-row space-y-5 md:space-x-32 mt-6">
+                    <button className={"rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 hover:bg-teal-100 " + (selectedBedroom.includes('Poingam') ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist("Poingam", selectedBedroom, setSelectedBedroom)}>
                         Poingam
                     </button>
-                    <button className={" rounded-md p-4 border-2 border-teal-500 w-1/3 hover:bg-teal-100 " + (selectedBedroom.includes('Taanlo') ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist("Taanlo", selectedBedroom, setSelectedBedroom)}>
+                    <button className={" rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 hover:bg-teal-100 " + (selectedBedroom.includes('Taanlo') ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist("Taanlo", selectedBedroom, setSelectedBedroom)}>
                         Taanlo
                     </button>
-                    <button className={"rounded-md p-4 border-2 border-teal-500 w-1/3 hover:bg-teal-100 " + (selectedBedroom.includes('Yenghebane') ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist("Yenghebane", selectedBedroom, setSelectedBedroom)}>
+                    <button className={"rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 hover:bg-teal-100 " + (selectedBedroom.includes('Yenghebane') ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist("Yenghebane", selectedBedroom, setSelectedBedroom)}>
                         Yenghebane
                     </button>
                 </div>
                 <div className="w-full flex" >
-                    <div className="w-4/6">
+                    <div className="w-full md:w-4/6">
                         <h4 className="mt-8">
                             Nombre d'enfants (au maximum un par chambre)
                         </h4>
-                        <div className="flex space-x-64 mt-6">
-                            <input value={childCount} max={selectedBedroom.length} min={0} onChange={e => setChildCount(Number.parseInt(e.target.value))} type="number" placeholder="Nombre d'enfants" className="bg-white  focus:outline-none rounded-md p-4 border-2 border-teal-500 w-1/3">
+                        <div className="flex-col md:flex-row space-y-5 md:space-x-32  mt-6">
+                            <input value={childCount} max={selectedBedroom.length} min={0} onChange={e => setChildCount(Number.parseInt(e.target.value))} type="number" placeholder="Nombre d'enfants" className="bg-white w-full md:w-1/3 focus:outline-none rounded-md p-4 border-2 border-teal-500 ">
                             </input>
                         </div>
                     </div>
 
                 </div>
                 <div className="w-full flex">
-                    <div className="w-2/3">
+                    <div className="w-full md:w-1/3">
                         <h4 className="mt-8">
                             Semaine de la réservation
                         </h4>
                         <div className="flex space-x-8 mt-6 ">
-                            <input type="date" onChange={e => setDateStart(new Date("" + e.target.value))} placeholder="Nombre d'enfants" className="bg-white focus:outline-none rounded-md p-4 border-2 border-teal-500 w-1/3 ">
+                            <input type="date" onChange={e => setDateStart(new Date("" + e.target.value))} placeholder="Nombre d'enfants" className="bg-white focus:outline-none rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 ">
                             </input>
                         </div>
 
                     </div>
                 </div>
                 <div className="w-full flex">
-                    <div className="w-2/3">
+                    <div className="w-full md:w-2/3">
                         <h4 className="mt-8">
-                            Sélecttionnez les jours que vous souhaitez réserver
+                            Sélectionnez les jours que vous souhaitez réserver
                         </h4>
 
-                        <div className="flex space-x-16 mt-6">
+                        <div className="flex flex-col md:flex-row space-y-5 md:space-x-16 mt-6">
                             {days.map(day =>
                                 <button key={day} className={" rounded-md p-4 border-2 border-teal-500 w-full hover:bg-teal-100 " + (selectedDay.includes(day) ? " bg-teal-400  " : " bg-white")} onClick={() => addElementToArrayIfDoesntExist(day, selectedDay, setSelectedDay)}>
                                     {day}
@@ -110,19 +110,19 @@ export default function Reservation() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex">
-                    <div className="w-1/2">
+                <div className="w-full flex flex-col md:flex-row ">
+                    <div className="w-full md:w-1/2">
                         <h4 className="mt-8">
                             Prénom
                         </h4>
-                        <input type="text" placeholder="Votre prénom" className="bg-white mt-6 rounded-md p-4 border-2 border-teal-500 w-1/3 focus:outline-none ">
+                        <input type="text" placeholder="Votre prénom" className="bg-white mt-6 rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 focus:outline-none ">
                         </input>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full md:w-1/2">
                         <h4 className="mt-8">
                             Nom
                         </h4>
-                        <input type="text" placeholder="Votre nom" className="bg-white mt-6 rounded-md p-4 border-2 border-teal-500 w-1/3 focus:outline-none ">
+                        <input type="text" placeholder="Votre nom" className="bg-white mt-6 rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 focus:outline-none ">
                         </input>
                     </div>
 
@@ -131,7 +131,7 @@ export default function Reservation() {
                     <h4 className="mt-8">
                         Email
                     </h4>
-                    <input type="mail" placeholder="Votre email" className="bg-white mt-6 rounded-md p-4 border-2 border-teal-500 w-1/3 focus:outline-none">
+                    <input type="mail" placeholder="Votre email" className="bg-white mt-6 rounded-md p-4 border-2 border-teal-500 w-full md:w-1/3 focus:outline-none">
                     </input>
                 </div>
                 <div className="w-full flex">
