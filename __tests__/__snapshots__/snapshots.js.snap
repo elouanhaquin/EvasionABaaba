@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <header
+    class="fixed top-0 bg-white z-50 w-full drop-shadow-md"
+  >
+    <nav
+      class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 w-full"
+    >
+      <div
+        class="flex flex-wrap justify-between items-center w-full"
+      >
+        <a
+          class="className"
+          href=""
+          role="title"
+        >
+          <span
+            class="self-center text-xl font-semibold whitespace-nowrap text-teal-600  "
+          >
+            Evasion à Baaba
+          </span>
+        </a>
+        <div
+          class="hidden md:flex align-middle"
+        >
+          <ul
+            class="md:flex md:flex-row gap-x-8 mt-4 font-medium mr-16 align-middle mb-4"
+          >
+            <li>
+              <a
+                aria-current="page"
+                class="block py-2 pr-4 pl-3 color-teal-500  lg:p-0 "
+                href="#Presentation"
+              >
+                Présentation
+              </a>
+            </li>
+            <li>
+              <a
+                class="block py-2 pr-4 pl-3 color-[#02757C] lg:p-0 "
+                href="#Informations"
+              >
+                Informations
+              </a>
+            </li>
+            <li>
+              <a
+                class="block py-2 pr-4 pl-3 color-[#02757C] lg:p-0  "
+                href="#Reserver"
+              >
+                Réserver
+              </a>
+            </li>
+            <li>
+              <a
+                class="block py-2 pr-4 pl-3 color-[#02757C] lg:p-0 "
+                href="#Contact"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+`;

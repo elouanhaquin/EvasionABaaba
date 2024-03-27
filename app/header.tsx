@@ -6,7 +6,7 @@ export default function HeaderPage() {
         <header className="fixed top-0 bg-white z-50 w-full drop-shadow-md">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 w-full">
                 <div className="flex flex-wrap justify-between items-center w-full">
-                    <a href="" className={cedarville.className}>
+                    <a href="" className={cedarville.className} role="title">
                         <span className="self-center text-xl font-semibold whitespace-nowrap text-teal-600  ">Evasion à Baaba</span>
                     </a>
                     

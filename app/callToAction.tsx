@@ -1,6 +1,3 @@
-'use client'
-import { useRouter } from 'next/navigation'
-
 export interface Ibutton{
     text : string,
     url : string,
@@ -8,10 +5,8 @@ export interface Ibutton{
 }
 
 export default function callToAction(p_button : Ibutton) {
-    const router = useRouter()
-
     function goToUrl(){
-       router.replace("#Contact")
+       window.location.replace("#Contact")
     }
 
     return (

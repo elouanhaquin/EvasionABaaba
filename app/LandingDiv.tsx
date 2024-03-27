@@ -1,5 +1,4 @@
 import CallToAction from "./callToAction";
-import styles from "./page.module.css";
 
 export default function LandingDiv() {
     return (
